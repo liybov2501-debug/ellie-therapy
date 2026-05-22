@@ -419,7 +419,7 @@ section{
 
 .therapy-gallery{
     margin-top:20px;
-    margin-bottom:50px;
+    margin-bottom:60px;
     overflow:hidden;
     position:relative;
 }
@@ -482,6 +482,10 @@ body{
 
 }
 
+.mobile-founder-image{
+    display:none;
+}
+
 @media(max-width:980px){
 
 .hero-grid,
@@ -490,14 +494,16 @@ body{
     grid-template-columns:1fr;
 }
 
-.founder-image{
-    order:2;
-    height:450px;
-    margin:20px 0;
+.founder > .founder-image{
+    display:none;
 }
 
-.founder-info{
-    order:1;
+.mobile-founder-image{
+    display:block;
+    height:450px;
+    margin:25px 0;
+    background:url('IMG9001.webp') center top/cover no-repeat;
+    border-radius:0;
 }
 
 .hero{
@@ -518,10 +524,6 @@ body{
     font-size:42px;
 }
 
-.founder-image{
-    height:450px;
-}
-
 .footer h2{
     font-size:44px;
 }
@@ -530,6 +532,7 @@ body{
     width:280px;
     height:auto;
 }
+
 
 }
 
@@ -656,7 +659,7 @@ Kids Center
 <div class="container fade">
 
 <h2 class="section-title">
-ДЗЕРКАЛО ЗАПИТУ БАТЬКІВ
+Дзеркало запиту батьків
 </h2>
 
 <p class="section-text">
@@ -704,7 +707,7 @@ Kids Center
 <div class="container fade">
 
 <h2 class="section-title">
-ЯК ВІДБУВАЄТЬСЯ РОБОТА
+Як відбувається робота
 </h2>
 
 <div class="cards">
@@ -764,7 +767,7 @@ Kids Center
 <div class="container fade clinical">
 
 <h2 class="section-title">
-ПРОФЕСІЙНА ПОЗИЦІЯ
+Професійна позиція
 </h2>
 
 <p class="section-text">
@@ -788,7 +791,7 @@ Kids Center
 <div class="container fade">
 
 <h2 class="section-title">
-ДЛЯ КОГО
+Для кого
 </h2>
 
 <div class="list">
@@ -1004,9 +1007,9 @@ How we work
 <div class="cards">
 
     <div class="card">
-        <h3>Гра як мова несвідомого</h3>
+        <h3>Play as the language of the unconscious</h3>
         <p>
-            Дитина виражає досвід і переживання через символічну гру.
+            Children express their experiences and emotions through symbolic play
         </p>
     </div>
 
@@ -1015,9 +1018,9 @@ How we work
     </div>
 
     <div class="card">
-        <h3>Малюнок і образ</h3>
+        <h3>Drawing and image</h3>
         <p>
-            Як спосіб вираження того, що ще неможливо сказати словами.
+            As a means of expressing what cannot yet be put into words
         </p>
     </div>
 
@@ -1026,9 +1029,9 @@ How we work
     </div>
 
     <div class="card">
-        <h3>Стабільний терапевтичний сетинг</h3>
+        <h3>A stable therapeutic setting</h3>
         <p>
-            Постійність простору створює умови для внутрішніх змін.
+            The consistency of the space creates conditions for inner change
         </p>
     </div>
 
@@ -1037,10 +1040,9 @@ How we work
     </div>
 
     <div class="card">
-        <h3>Робота з батьками</h3>
+        <h3>Working with parents</h3>
         <p>
-            Розуміння дитини завжди включає розуміння її середовища вдома.
-        </p>
+            Understanding the kids always includes understanding their home environment
     </div>
 
     <div class="cards-image">
@@ -1123,9 +1125,11 @@ This is also a space for parents who want to understand their child's inner stat
 <div class="founder-info">
 
 <h2>
-Zhanna<br>
+Zhanna <br>
 Mosiichuk
 </h2>
+
+<div class="founder-image mobile-founder-image"></div>
 
 <p>
 Psychoanalytic Therapist<br>
@@ -1269,7 +1273,7 @@ Kids Center
 ${gallery}
 <br>
 <h2 class="section-title">
-ДЗЕРКАЛО ЗАПИТУ БАТЬКІВ
+Дзеркало запиту батьків
 </h2>
 
 <p class="section-text">
@@ -1293,7 +1297,7 @@ ${gallery}
 <div class="container fade">
 
 <h2 class="section-title">
-ЯК ВІДБУВАЄТЬСЯ РОБОТА
+Як відбувається робота
 </h2>
 
 <div class="cards">
@@ -1301,7 +1305,7 @@ ${gallery}
     <div class="card">
         <h3>Гра як мова несвідомого</h3>
         <p>
-            Дитина виражає досвід і переживання через символічну гру.
+            Дитина виражає досвід і переживання через символічну гру
         </p>
     </div>
 
@@ -1318,7 +1322,7 @@ ${gallery}
     <div class="card">
         <h3>Малюнок і образ</h3>
         <p>
-            Як спосіб вираження того, що ще неможливо сказати словами.
+            Як спосіб вираження того, що ще неможливо сказати словами
         </p>
     </div>
 
@@ -1335,7 +1339,7 @@ ${gallery}
     <div class="card">
         <h3>Стабільний терапевтичний сетинг</h3>
         <p>
-            Постійність простору створює умови для внутрішніх змін.
+            Постійність простору створює умови для внутрішніх змін
         </p>
     </div>
 
@@ -1352,7 +1356,7 @@ ${gallery}
     <div class="card">
         <h3>Робота з батьками</h3>
         <p>
-            Розуміння дитини завжди включає розуміння її середовища вдома.
+            Розуміння дитини завжди включає розуміння її середовища вдома
         </p>
     </div>
 
@@ -1377,7 +1381,7 @@ ${gallery}
 <div class="container fade clinical">
 
 <h2 class="section-title">
-ПРОФЕСІЙНА ПОЗИЦІЯ
+Професійна позиція
 </h2>
 
 <p class="section-text">
@@ -1401,7 +1405,7 @@ ${gallery}
 <div class="container fade">
 
 <h2 class="section-title">
-ДЛЯ КОГО
+Для кого
 </h2>
 
 <div class="list">
@@ -1449,8 +1453,9 @@ ${gallery}
 Мосійчук
 </h2>
 
-<p>
+<div class="founder-image mobile-founder-image"></div>
 
+<p>
 Психоаналітичний терапевт<br>
 Засновниця Ellie Therapy Kids Center
 </p>
