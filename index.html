@@ -255,28 +255,46 @@ section{
 @media (max-width: 768px){
 
     .cards{
-        grid-template-columns: 1fr;
-        gap: 18px;
+        display:flex;
+        flex-direction:column;
+        gap:0;
+        width:100%;
     }
 
     .card{
-        padding: 22px;
-        border-radius: 0;
+        width:100%;
+        padding:32px 26px;
+        margin:0;
+        border-radius:0;
     }
 
     .card h3{
-        font-size: 20px;
+        font-size:42px;
+        line-height:1.05;
+        margin-bottom:22px;
     }
 
     .card p{
-        font-size: 15px;
-        line-height: 1.6;
+        font-size:18px;
+        line-height:1.7;
     }
 
     .cards-image{
-        min-height: 220px;
-        border-radius: 0;
+        width:100%;
+        height:420px;
+        min-height:420px;
+        margin:0;
+        border-radius:0;
+        overflow:hidden;
     }
+
+    .cards-image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+    }
+
 }
 
 .card{
@@ -328,7 +346,6 @@ section{
 }
 
 .list-item{
-    border-top:1px solid var(--line);
     padding-top:24px;
     line-height:1.9;
     font-size:17px;
@@ -363,8 +380,7 @@ section{
 
 .footer{
     padding:140px 0 80px;
-    text-align:center;
-    border-top:1px solid var(--line);
+    text-align:left;
 }
 
 .footer h2{
@@ -376,7 +392,7 @@ section{
 
 .footer p{
     max-width:760px;
-    margin:auto;
+    margin:0;
     line-height:2;
     color:var(--muted);
     text-wrap:pretty;
@@ -506,7 +522,8 @@ body{
 
 
 .container{
-    width:88%;
+   width:min(100%, 700px);
+padding:0 24px;
 }
 
 .hero{
@@ -542,7 +559,8 @@ body{
     display:flex;
     flex-direction:column;
     gap:14px;
-    align-items:center;
+    align-items:flex-start;
+    text-align:left;
 }
 
 .contacts-block h3{
@@ -601,7 +619,7 @@ Kids Center
 
 <p>
 Простір дитячої психоаналітичної терапії, де поведінка дитини розглядається як частина її внутрішнього світу, а не лише проблема, яку потрібно зупинити.
-<br><br>
+<br>
 Робота ґрунтується на підходах Ф. Дольто, З. Фрейда, М.Кляйн та інших психоаналітичних традиціях.
 </p>
 
@@ -628,10 +646,10 @@ Kids Center
 <p class="section-text">
 
 Ви відчуваєте, що з дитиною щось відбувається.
-<br><br>
+<br>
 
 Тривога, замкнутість, агресія, ревнощі, мовчання або труднощі адаптації часто є не “поганою поведінкою”, а способом психіки повідомити про внутрішню напругу.
-<br><br>
+<br>
 
 Терапія допомагає зрозуміти, що стоїть за симптомом, і поступово стабілізувати стан дитини.
 
@@ -694,7 +712,7 @@ Kids Center
     </div>
 
     <div class="cards-image">
-        <img src="32.webp" alt="therapy image">
+        <img src="малюнок.webp" alt="therapy image">
     </div>
 
     <div class="card">
@@ -705,7 +723,7 @@ Kids Center
     </div>
 
     <div class="cards-image">
-        <img src="34.webp" alt="therapy image">
+        <img src="87.webp" alt="therapy image">
     </div>
 
     <div class="card">
@@ -716,7 +734,7 @@ Kids Center
     </div>
 
     <div class="cards-image">
-        <img src="87.webp" alt="therapy image">
+        <img src="терапевт.webp" alt="therapy image">
     </div>
 
 </div>
@@ -736,10 +754,10 @@ Kids Center
 <p class="section-text">
 
 Симптом дитини розглядається як значуща форма вираження внутрішнього конфлікту.
-<br><br>
+<br>
 
 Робота спрямована на розуміння цього процесу та його трансформацію.
-<br><br>
+<br>
 
 Терапія підтримує розвиток дитини, її здатність до вираження, адаптації та стабільності.
 
@@ -822,7 +840,7 @@ Mosiichuk
 
 <p>
 Практичний досвід роботи з дітьми включає:
-<br><br>
+<br>
 
 ● тривожні стани, страхи і нічні жахи<br>
 ● селективний мутизм<br>
@@ -915,7 +933,7 @@ Kids Center
 
 <p>
 A space for child psychoanalytic therapy, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
-<br><br>
+<br>
 Our work is grounded in the approaches of F. Dolto, S. Freud, M. Klein, and other psychoanalytic traditions.
 </p>
 
@@ -937,7 +955,7 @@ Book a consultation
 <div class="container fade">
 
 ${gallery}
-<br><br><br>
+<br>
 
 <h2 class="section-title">
 Reflecting parental concern
@@ -946,10 +964,10 @@ Reflecting parental concern
 <p class="section-text">
 
 You feel like something is going on with your child.
-<br><br>
+<br>
 
 Anxiety, withdrawal, aggression, jealousy, silence, or adaptation difficulties are often not the signs of "bad behaviour", but rather the psyche's way of signalling inner tension.
-<br><br>
+<br>
 
 Therapy helps us understand what lies behind the symptoms and gradually stabilise the child’s condition.
 
@@ -988,7 +1006,7 @@ How we work
     </div>
 
     <div class="cards-image">
-        <img src="32.webp" alt="therapy image">
+        <img src="малюнок.webp" alt="therapy image">
     </div>
 
     <div class="card">
@@ -999,7 +1017,7 @@ How we work
     </div>
 
     <div class="cards-image">
-        <img src="34.webp" alt="therapy image">
+        <img src="87.webp" alt="therapy image">
     </div>
 
     <div class="card">
@@ -1010,7 +1028,7 @@ How we work
     </div>
 
     <div class="cards-image">
-        <img src="87.webp" alt="therapy image">
+        <img src="терапевт.webp" alt="therapy image">
     </div>
 </div>
 </section>
@@ -1027,10 +1045,10 @@ Clinical approach
 <p class="section-text">
 
 A child’s symptoms are viewed as a meaningful form of expressing an internal conflict.
-<br><br>
+<br>
 
 The work is directed at understanding this process and facilitating its transformation.
-<br><br>
+<br>
 
 Therapy supports the child's development, their capacity for expression, adaptation, and stability.
 
@@ -1109,7 +1127,7 @@ Over 18 years of experience working with children, from early development to cli
 
 <p>
 Clinical experience with children includes working with:
-<br><br>
+<br>
 
 ● anxiety, fears, and nightmares<br>
 ● selective mutism<br>
@@ -1160,10 +1178,32 @@ Instagram
 </div>
 
 <div class="contact-item">
+<a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
+WhatsApp
+</a>
+</div>
+
+<div class="contact-item">
 <a href="mailto:zhanna@elliekidstherapy.co.ua">
 zhanna@elliekidstherapy.co.ua
 </a>
 </div>
+
+</div>
+
+<div style="text-align:center; margin-top:60px; color:#8c8c8c; font-size:14px; line-height:2;">
+
+<p>Privacy policy</p>
+
+<p>Agreement</p>
+
+<p style="color:#1d1d1d;">
+Website by yamm.design
+</p>
+
+<p>
+©2026 Zhanna Mosiichuk / All rights reserved
+</p>
 
 </div>
 
@@ -1190,7 +1230,7 @@ Kids Center
 
 <p>
 Простір дитячої психоаналітичної терапії, де поведінка дитини розглядається як частина її внутрішнього світу, а не лише проблема, яку потрібно зупинити.
-<br><br>
+<br>
 Робота ґрунтується на підходах Ф. Дольто, З. Фрейда, М.Кляйн та інших психоаналітичних традиціях.
 </p>
 
@@ -1211,7 +1251,7 @@ Kids Center
 <div class="container fade">
 
 ${gallery}
-<br><br><br><br>
+<br>
 <h2 class="section-title">
 ДЗЕРКАЛО ЗАПИТУ БАТЬКІВ
 </h2>
@@ -1219,10 +1259,10 @@ ${gallery}
 <p class="section-text">
 
 Ви відчуваєте, що з дитиною щось відбувається.
-<br><br>
+<br>
 
 Тривога, замкнутість, агресія, ревнощі, мовчання або труднощі адаптації часто є не “поганою поведінкою”, а способом психіки повідомити про внутрішню напругу.
-<br><br>
+<br>
 
 Терапія допомагає зрозуміти, що стоїть за симптомом, і поступово стабілізувати стан дитини.
 
@@ -1268,7 +1308,7 @@ ${gallery}
 
     <div class="cards-image">
         <img 
-            src="32.webp"
+            src="малюнок.webp"
             alt="Малюнок і образ"
             loading="lazy"
             width="800"
@@ -1285,7 +1325,7 @@ ${gallery}
 
     <div class="cards-image">
         <img 
-            src="34.webp"
+            src="87.webp"
             alt="Стабільний терапевтичний сетинг"
             loading="lazy"
             width="800"
@@ -1302,7 +1342,7 @@ ${gallery}
 
     <div class="cards-image">
         <img 
-            src="87.webp"
+            src="терапевт.webp"
             alt="Робота з батьками"
             loading="lazy"
             width="800"
@@ -1327,10 +1367,10 @@ ${gallery}
 <p class="section-text">
 
 Симптом дитини розглядається як значуща форма вираження внутрішнього конфлікту.
-<br><br>
+<br>
 
 Робота спрямована на розуміння цього процесу та його трансформацію.
-<br><br>
+<br>
 
 Терапія підтримує розвиток дитини, її здатність до вираження, адаптації та стабільності.
 
@@ -1410,7 +1450,7 @@ ${gallery}
 
 <p>
 Практичний досвід роботи з дітьми включає:
-<br><br>
+<br>
 
 ● тривожні стани, страхи і нічні жахи<br>
 ● селективний мутизм<br>
@@ -1462,6 +1502,12 @@ Instagram
 </div>
 
 <div class="contact-item">
+<a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
+WhatsApp
+</a>
+</div>
+
+<div class="contact-item">
 <a href="mailto:zhanna@elliekidstherapy.co.ua">
 zhanna@elliekidstherapy.co.ua
 </a>
@@ -1469,7 +1515,22 @@ zhanna@elliekidstherapy.co.ua
 
 </div>
 
+<div style="text-align:center; margin-top:60px; color:#8c8c8c; font-size:14px; line-height:2;">
+
+<p>Privacy policy</p>
+
+<p>Agreement</p>
+
+<p style="color:#1d1d1d;">
+Website by yamm.design
+</p>
+
+<p>
+©2026 Zhanna Mosiichuk / All rights reserved
+</p>
+
 </div>
+
 
 </footer>
 
