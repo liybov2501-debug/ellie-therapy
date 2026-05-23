@@ -56,8 +56,11 @@ body::before{
 }
 
 .container{
-    width:min(1180px,90%);
-    margin:auto;
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding-left:48px;
+    padding-right:48px;
 }
 
 header{
@@ -491,19 +494,29 @@ body{
 .hero-grid,
 .cards,
 .founder{
+    display:grid;
     grid-template-columns:1fr;
 }
 
+.founder{
+    display:flex;
+    flex-direction:column;
+}
+
 .founder > .founder-image{
-    display:none;
+    order:2;
+    display:block;
+    height:450px;
+    width:100%;
+    margin:20px 0;
+}
+
+.founder-info{
+    order:1;
 }
 
 .mobile-founder-image{
-    display:block;
-    height:450px;
-    margin:25px 0;
-    background:url('IMG9001.webp') center top/cover no-repeat;
-    border-radius:0;
+    display:none;
 }
 
 .hero{
@@ -540,8 +553,11 @@ body{
 
 
 .container{
-   width:min(100%, 700px);
-padding:0 24px;
+    width:100%;
+    max-width:700px;
+    padding-left:24px;
+    padding-right:24px;
+    margin:0 auto;
 }
 
 .hero{
@@ -571,6 +587,12 @@ padding:0 24px;
     height: 260px;
 }
 
+.button{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 }
 
 .contacts-block{
@@ -597,6 +619,14 @@ padding:0 24px;
 
 .contact-item a:hover{
     opacity:.6;
+}
+
+.pink-dot{
+    color:#eba2bf;
+}
+
+.founder-info li::marker{
+    color:#eba2bf;
 }
 
 </style>
@@ -797,27 +827,27 @@ Kids Center
 <div class="list">
 
 <div class="list-item">
-● переживають тривогу, страхи, нічні пробудження або енурез
+<span class="pink-dot">●</span> переживають тривогу, страхи, нічні пробудження або енурез
 </div>
 
 <div class="list-item">
-● проявляють агресію або замкнутість
+<span class="pink-dot">●</span> проявляють агресію або замкнутість
 </div>
 
 <div class="list-item">
-● проходять через зміни: переїзд, школа, розлучення батьків, народження в сімʼї інших дітей
+<span class="pink-dot">●</span> проходять через зміни: переїзд, школа, розлучення батьків, народження в сімʼї інших дітей
 </div>
 
 <div class="list-item">
-● зростають у двомовному або мультикультурному середовищі
+<span class="pink-dot">●</span> зростають у двомовному або мультикультурному середовищі
 </div>
 
 <div class="list-item">
-● мають труднощі з вираженням через мову
+<span class="pink-dot">●</span> мають труднощі з вираженням через мову
 </div>
 
 <div class="list-item">
-Це простір для батьків, які прагнуть зрозуміти внутрішній стан дитини та підтримати її розвиток.
+<span class="pink-dot">●</span> це простір для батьків, які прагнуть зрозуміти внутрішній стан дитини та підтримати її розвиток.
 </div>
 
 </div>
@@ -861,16 +891,16 @@ Mosiichuk
 Практичний досвід роботи з дітьми включає:
 <br>
 
-● тривожні стани, страхи і нічні жахи<br>
-● селективний мутизм<br>
-● агресію і труднощі з імпульсивністю<br>
-● замкнутість і труднощі контакту<br>
-● розлади аутистичного спектру<br>
-● психосоматичні прояви<br>
-● труднощі адаптації після переїзду і втрати середовища<br>
-● реакцію на розлучення батьків і зміни в сім’ї<br>
-● затримку мовленнєвого розвитку<br>
-● гіперактивність і труднощі концентрації
+<span class="pink-dot">●</span> тривожні стани, страхи і нічні жахи<br>
+<span class="pink-dot">●</span> селективний мутизм<br>
+<span class="pink-dot">●</span> агресію і труднощі з імпульсивністю<br>
+<span class="pink-dot">●</span> замкнутість і труднощі контакту<br>
+<span class="pink-dot">●</span> розлади аутистичного спектру<br>
+<span class="pink-dot">●</span> психосоматичні прояви<br>
+<span class="pink-dot">●</span> труднощі адаптації після переїзду і втрати середовища<br>
+<span class="pink-dot">●</span> реакцію на розлучення батьків і зміни в сім’ї<br>
+<span class="pink-dot">●</span> затримку мовленнєвого розвитку<br>
+<span class="pink-dot">●</span> гіперактивність і труднощі концентрації
 </p>
 
 <p>
@@ -1087,27 +1117,27 @@ Who this is for
 <div class="list">
 
 <div class="list-item">
-● experience anxiety, fears, night awakenings, or enuresis
+<span class="pink-dot">●</span> experience anxiety, fears, night awakenings, or enuresis
 </div>
 
 <div class="list-item">
-● display aggression or withdrawal
+<span class="pink-dot">●</span> display aggression or withdrawal
 </div>
 
 <div class="list-item">
-● are going through major life changes: moving, starting school, parental divorce, the birth of a sibling, etc
+<span class="pink-dot">●</span> are going through major life changes: moving, starting school, parental divorce, the birth of a sibling, etc
 </div>
 
 <div class="list-item">
-● are growing up in a bilingual or multicultural environment
+<span class="pink-dot">●</span> are growing up in a bilingual or multicultural environment
 </div>
 
 <div class="list-item">
-● have difficulties with verbal expression
+<span class="pink-dot">●</span> have difficulties with verbal expression
 </div>
 
 <div class="list-item">
-This is also a space for parents who want to understand their child's inner state and support their development.
+<span class="pink-dot">●</span> this is also a space for parents who want to understand their child's inner state and support their development.
 </div>
 
 </div>
@@ -1129,7 +1159,7 @@ Zhanna <br>
 Mosiichuk
 </h2>
 
-<div class="founder-image mobile-founder-image"></div>
+
 
 <p>
 Psychoanalytic Therapist<br>
@@ -1149,16 +1179,16 @@ Over 18 years of experience working with children, from early development to cli
 Clinical experience with children includes working with:
 <br>
 
-● anxiety, fears, and nightmares<br>
-● selective mutism<br>
-● aggression and impulse control difficulties<br>
-● withdrawal and difficulties with contact<br>
-● autism spectrum disorders<br>
-● psychosomatic symptoms<br>
-● adaptation challenges following a relocation/move or a loss of environment<br>
-● responses to parental separation and family changes<br>
-● speech and language developmental delay<br>
-● hyperactivity and difficulties with concentration
+<span class="pink-dot">●</span> anxiety, fears, and nightmares<br>
+<span class="pink-dot">●</span> selective mutism<br>
+<span class="pink-dot">●</span> aggression and impulse control difficulties<br>
+<span class="pink-dot">●</span> withdrawal and difficulties with contact<br>
+<span class="pink-dot">●</span> autism spectrum disorders<br>
+<span class="pink-dot">●</span> psychosomatic symptoms<br>
+<span class="pink-dot">●</span> adaptation challenges following a relocation/move or a loss of environment<br>
+<span class="pink-dot">●</span> responses to parental separation and family changes<br>
+<span class="pink-dot">●</span> speech and language developmental delay<br>
+<span class="pink-dot">●</span> hyperactivity and difficulties with concentration
 </p>
 
 <p>
@@ -1411,27 +1441,27 @@ ${gallery}
 <div class="list">
 
 <div class="list-item">
-● переживають тривогу, страхи, нічні пробудження або енурез
+<span class="pink-dot">●</span> переживають тривогу, страхи, нічні пробудження або енурез
 </div>
 
 <div class="list-item">
-● проявляють агресію або замкнутість
+<span class="pink-dot">●</span> проявляють агресію або замкнутість
 </div>
 
 <div class="list-item">
-● проходять через зміни: переїзд, школа, розлучення батьків, народження в сімʼї інших дітей
+<span class="pink-dot">●</span> проходять через зміни: переїзд, школа, розлучення батьків, народження в сімʼї інших дітей
 </div>
 
 <div class="list-item">
-● зростають у двомовному або мультикультурному середовищі
+<span class="pink-dot">●</span> зростають у двомовному або мультикультурному середовищі
 </div>
 
 <div class="list-item">
-● мають труднощі з вираженням через мову
+<span class="pink-dot">●</span> мають труднощі з вираженням через мову
 </div>
 
 <div class="list-item">
-Це простір для батьків, які прагнуть зрозуміти внутрішній стан дитини та підтримати її розвиток.
+<span class="pink-dot">●</span> це простір для батьків, які прагнуть зрозуміти внутрішній стан дитини та підтримати її розвиток.
 </div>
 
 </div>
@@ -1453,7 +1483,7 @@ ${gallery}
 Мосійчук
 </h2>
 
-<div class="founder-image mobile-founder-image"></div>
+
 
 <p>
 Психоаналітичний терапевт<br>
@@ -1473,16 +1503,16 @@ ${gallery}
 Практичний досвід роботи з дітьми включає:
 <br>
 
-● тривожні стани, страхи і нічні жахи<br>
-● селективний мутизм<br>
-● агресію і труднощі з імпульсивністю<br>
-● замкнутість і труднощі контакту<br>
-● розлади аутистичного спектру<br>
-● психосоматичні прояви<br>
-● труднощі адаптації після переїзду і втрати середовища<br>
-● реакцію на розлучення батьків і зміни в сім’ї<br>
-● затримку мовленнєвого розвитку<br>
-● гіперактивність і труднощі концентрації
+<span class="pink-dot">●</span> тривожні стани, страхи і нічні жахи<br>
+<span class="pink-dot">●</span> селективний мутизм<br>
+<span class="pink-dot">●</span> агресію і труднощі з імпульсивністю<br>
+<span class="pink-dot">●</span> замкнутість і труднощі контакту<br>
+<span class="pink-dot">●</span> розлади аутистичного спектру<br>
+<span class="pink-dot">●</span> психосоматичні прояви<br>
+<span class="pink-dot">●</span> труднощі адаптації після переїзду і втрати середовища<br>
+<span class="pink-dot">●</span> реакцію на розлучення батьків і зміни в сім’ї<br>
+<span class="pink-dot">●</span> затримку мовленнєвого розвитку<br>
+<span class="pink-dot">●</span> гіперактивність і труднощі концентрації
 </p>
 
 <p>
