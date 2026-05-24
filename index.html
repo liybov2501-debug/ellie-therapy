@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 
 <style>
 
@@ -117,7 +117,7 @@ header{
 .hero-grid{
     display:grid;
     grid-template-columns:1.1fr .9fr;
-    gap:80px;
+    gap:0px;
     align-items:center;
 }
 
@@ -126,7 +126,7 @@ header{
     letter-spacing:2px;
     font-size:12px;
     color:var(--muted);
-    margin-bottom:28px;
+    margin-bottom:29px;
 }
 
 .hero h1{
@@ -134,7 +134,7 @@ header{
     font-size:clamp(56px,9vw,110px);
     line-height:.9;
     font-weight:500;
-    margin-bottom:34px;
+    margin-bottom:19px;
     letter-spacing:-1.5px;
 }
 
@@ -150,7 +150,8 @@ header{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    margin-top:40px;
+    margin-top:20px;
+    margin-bottom:30px;
     padding:18px 34px;
     border:1px solid #2a45be;
     border-radius:100px;
@@ -192,34 +193,34 @@ header{
     background:url('1O1A7002 .webp') center center/cover no-repeat;
 }
 
-section{
-    padding:45px 0;
-}
+
 
 .cards-section{
-    padding-top:20px;
+    padding-top:0px;
 }
 
 .section-title{
     font-family:'Nunito',sans-serif;
-    font-size:64px;
+    font-size:55px;
     line-height:1;
-    margin-bottom:14px;
+    margin-top:25px;
+    margin-bottom:15px;
 }
 
 .section-text{
     font-size:17px;
-    line-height:1.55;
+    line-height:2;
     color:var(--muted);
     max-width:850px;
     text-wrap:pretty;
+    margin-bottom:11px;
 }
 
 .cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    margin-top: 40px;
+    margin-top: 24px;
 }
 
 .card{
@@ -347,13 +348,14 @@ section{
 }
 
 .list{
-    margin-top:20px;
+    margin-top:15px;
     display:grid;
     gap:10px;
+    color:var(--muted);
 }
 
 .list-item{
-    padding-top:10px;
+    padding-top:0px;
     line-height:1.9;
     font-size:17px;
 }
@@ -361,7 +363,7 @@ section{
 .founder{
     display:grid;
     grid-template-columns:.9fr 1.1fr;
-    gap:60px;
+    gap:16px;
     align-items:center;
 }
 
@@ -373,15 +375,15 @@ section{
 
 .founder-info h2{
     font-family:'Nunito',sans-serif;
-    font-size:50px;
+    font-size:34px;
     line-height:.95;
-    margin-bottom:34px;
+    margin-bottom:15px;
 }
 
 .founder-info p{
     line-height:2;
     color:var(--muted);
-    margin-bottom:24px;
+    margin-bottom:13px;
     text-wrap:pretty;
 }
 
@@ -394,7 +396,7 @@ section{
     font-family:'Nunito',sans-serif;
     font-size:82px;
     line-height:.95;
-    margin-bottom:26px;
+    margin-bottom:17px;
 }
 
 .footer p{
@@ -422,7 +424,7 @@ section{
 
 .therapy-gallery{
     margin-top:20px;
-    margin-bottom:60px;
+    margin-bottom:26px;
     overflow:hidden;
     position:relative;
 }
@@ -504,15 +506,15 @@ body{
 }
 
 .founder > .founder-image{
-    order:2;
+    order:1;
     display:block;
     height:450px;
     width:100%;
-    margin:20px 0;
+    margin:7px 0;
 }
 
 .founder-info{
-    order:1;
+    order:2;
 }
 
 .mobile-founder-image{
@@ -538,7 +540,7 @@ body{
 }
 
 .footer h2{
-    font-size:44px;
+    font-size:34px;
 }
 
 .gallery-item{
@@ -596,7 +598,7 @@ body{
 }
 
 .contacts-block{
-    margin-top:40px;
+    margin-top:28px;
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -629,6 +631,7 @@ body{
     color:#eba2bf;
 }
 
+
 </style>
 </head>
 
@@ -653,7 +656,7 @@ body{
 
 <section class="hero">
 
-<div class="container hero-grid fade">
+<div class="container hero-grid fade visible">
 
 <div>
 
@@ -667,16 +670,17 @@ Kids Center
 </h1>
 
 <p>
-Простір дитячої психоаналітичної терапії, де поведінка дитини розглядається як частина її внутрішнього світу, а не лише проблема, яку потрібно зупинити.
+A space for child psychoanalytic therapy, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
 <br>
-Робота ґрунтується на підходах Ф. Дольто, З. Фрейда, М.Кляйн та інших психоаналітичних традиціях.
+Our work is grounded in the approaches of F. Dolto, S. Freud, M. Klein, and other psychoanalytic traditions.
 </p>
 
 <a href="https://instagram.com/elliekids_center" target="_blank" class="button">
-Записатись
+Book a consultation
 </a>
 
 </div>
+
 
 <div class="hero-image"></div>
 
@@ -687,22 +691,6 @@ Kids Center
 <section>
 
 <div class="container fade">
-
-<h2 class="section-title">
-Дзеркало запиту батьків
-</h2>
-
-<p class="section-text">
-
-Ви відчуваєте, що з дитиною щось відбувається.
-<br><br>
-
-Тривога, замкнутість, агресія, ревнощі, мовчання або труднощі адаптації часто є не “поганою поведінкою”, а способом психіки повідомити про внутрішню напругу.
-<br><br>
-
-Терапія допомагає зрозуміти, що стоїть за симптомом, і поступово стабілізувати стан дитини.
-
-</p>
 
 
 <div class="therapy-gallery">
@@ -718,7 +706,7 @@ Kids Center
 
 <div class="gallery-item"><img src="1O1A69211.webp"></div>
 <div class="gallery-item"><img src="1O1A70599.webp"></div>
-<div class="gallery-item"><img src="1O1A7031.webp"></div>
+<div class="gallery-item"><img src="1O1A70311.webp"></div>
 <div class="gallery-item"><img src="1O1A71400.webp"></div>
 <div class="gallery-item"><img src="1O1A6817.webp"></div>
 <div class="gallery-item"><img src="1O1A69599.webp"></div>
@@ -727,6 +715,26 @@ Kids Center
 </div>
 </div>
 
+
+
+<h2 class="section-title">
+Reflecting parental concern
+</h2>
+
+
+<p class="section-text">
+You feel like something is going on with your child.
+</p>
+
+<p class="section-text">
+Anxiety, withdrawal, aggression, jealousy, silence, or adaptation difficulties are often not the signs of "bad behaviour", but rather the psyche's way of signalling inner tension.
+</p>
+
+<p class="section-text">
+Therapy helps us understand what lies behind the symptoms and gradually stabilise the child’s condition.
+</p>
+
+</p>
 
 </div>
 
@@ -737,15 +745,15 @@ Kids Center
 <div class="container fade">
 
 <h2 class="section-title">
-Як відбувається робота
+How we work
 </h2>
 
 <div class="cards">
 
     <div class="card">
-        <h3>Гра як мова несвідомого</h3>
+        <h3>Play as the language of the unconscious</h3>
         <p>
-            Дитина виражає досвід і переживання через символічну гру.
+            Children express their experiences and emotions through symbolic play
         </p>
     </div>
 
@@ -754,9 +762,9 @@ Kids Center
     </div>
 
     <div class="card">
-        <h3>Малюнок і образ</h3>
+        <h3>Drawing and image</h3>
         <p>
-            Як спосіб вираження того, що ще неможливо сказати словами.
+            As a means of expressing what cannot yet be put into words
         </p>
     </div>
 
@@ -765,9 +773,9 @@ Kids Center
     </div>
 
     <div class="card">
-        <h3>Стабільний терапевтичний сетинг</h3>
+        <h3>A stable therapeutic setting</h3>
         <p>
-            Постійність простору створює умови для внутрішніх змін.
+            The consistency of the space creates conditions for inner change
         </p>
     </div>
 
@@ -776,41 +784,41 @@ Kids Center
     </div>
 
     <div class="card">
-        <h3>Робота з батьками</h3>
+        <h3>Working with parents</h3>
         <p>
-            Розуміння дитини завжди включає розуміння її середовища вдома.
-        </p>
-    </div>
+            Understanding the kids always includes understanding their home environment
+    </p></div>
 
     <div class="cards-image">
         <img src="терапевт.webp" alt="therapy image">
     </div>
-
 </div>
-
-</div>
-
-</section>
+</div></section>
+<!-- ПРОДОВЖЕННЯ КОДУ ПІСЛЯ SECTION "HOW WE WORK" -->
 
 <section>
 
 <div class="container fade clinical">
 
 <h2 class="section-title">
-Професійна позиція
+Clinical approach
 </h2>
 
+
+
 <p class="section-text">
-
-Симптом дитини розглядається як значуща форма вираження внутрішнього конфлікту.
-<br><br>
-
-Робота спрямована на розуміння цього процесу та його трансформацію.
-<br><br>
-
-Терапія підтримує розвиток дитини, її здатність до вираження, адаптації та стабільності.
-
+A child’s symptoms are viewed as a meaningful form of expressing an internal conflict.
 </p>
+
+<p class="section-text">
+The work is directed at understanding this process and facilitating its transformation.
+</p>
+
+<p class="section-text">
+Therapy supports the child's development, their capacity for expression, adaptation, and stability.
+</p>
+
+
 
 </div>
 
@@ -821,33 +829,33 @@ Kids Center
 <div class="container fade">
 
 <h2 class="section-title">
-Для кого
+Who this is for
 </h2>
 
 <div class="list">
 
 <div class="list-item">
-<span class="pink-dot">●</span> переживають тривогу, страхи, нічні пробудження або енурез
+<span class="pink-dot">●</span> experience anxiety, fears, night awakenings, or enuresis
 </div>
 
 <div class="list-item">
-<span class="pink-dot">●</span> проявляють агресію або замкнутість
+<span class="pink-dot">●</span> display aggression or withdrawal
 </div>
 
 <div class="list-item">
-<span class="pink-dot">●</span> проходять через зміни: переїзд, школа, розлучення батьків, народження в сімʼї інших дітей
+<span class="pink-dot">●</span> are going through major life changes: moving, starting school, parental divorce, the birth of a sibling, etc
 </div>
 
 <div class="list-item">
-<span class="pink-dot">●</span> зростають у двомовному або мультикультурному середовищі
+<span class="pink-dot">●</span> are growing up in a bilingual or multicultural environment
 </div>
 
 <div class="list-item">
-<span class="pink-dot">●</span> мають труднощі з вираженням через мову
+<span class="pink-dot">●</span> have difficulties with verbal expression
 </div>
 
 <div class="list-item">
-<span class="pink-dot">●</span> це простір для батьків, які прагнуть зрозуміти внутрішній стан дитини та підтримати її розвиток.
+<span class="pink-dot">●</span> this is also a space for parents who want to understand their child's inner state and support their development.
 </div>
 
 </div>
@@ -858,53 +866,51 @@ Kids Center
 
 <section>
 
-<div class="container founder fade visible">
+<div class="container founder fade">
 
 <div class="founder-image"></div>
 
 <div class="founder-info">
 
-<h2> 
-    {
-    font-size: 48px;
-Zhanna<br>
+<h2>
+Zhanna <br>
 Mosiichuk
-}
 </h2>
 
-<p>
 
-Психоаналітичний терапевт<br>
-Засновниця Ellie Therapy Kids Center
+
+<p>
+Psychoanalytic Therapist founder of<br>
+Ellie Therapy Kids Center
 </p>
 
 <p>
-Психоаналітична підготовка в Міжнародному інституті глибинної психології.
-Член Української Асоціації Психоаналізу.
+Psychoanalytic training at the International Institute of Depth Psychology.
+Member of the Ukrainian Association of Psychoanalysis.
 </p>
 
 <p>
-Понад 18 років роботи з дітьми, від раннього розвитку до клінічної практики. Організувала власний центр розвитку в Києві.
+Over 18 years of experience working with children, from early development to clinical practice. Founded her own child development centre in Kyiv.
 </p>
 
 <p>
-Практичний досвід роботи з дітьми включає:
+Clinical experience with children includes working with:
 <br>
 
-<span class="pink-dot">●</span> тривожні стани, страхи і нічні жахи<br>
-<span class="pink-dot">●</span> селективний мутизм<br>
-<span class="pink-dot">●</span> агресію і труднощі з імпульсивністю<br>
-<span class="pink-dot">●</span> замкнутість і труднощі контакту<br>
-<span class="pink-dot">●</span> розлади аутистичного спектру<br>
-<span class="pink-dot">●</span> психосоматичні прояви<br>
-<span class="pink-dot">●</span> труднощі адаптації після переїзду і втрати середовища<br>
-<span class="pink-dot">●</span> реакцію на розлучення батьків і зміни в сім’ї<br>
-<span class="pink-dot">●</span> затримку мовленнєвого розвитку<br>
-<span class="pink-dot">●</span> гіперактивність і труднощі концентрації
+<span class="pink-dot">●</span> anxiety, fears, and nightmares<br>
+<span class="pink-dot">●</span> selective mutism<br>
+<span class="pink-dot">●</span> aggression and impulse control difficulties<br>
+<span class="pink-dot">●</span> withdrawal and difficulties with contact<br>
+<span class="pink-dot">●</span> autism spectrum disorders<br>
+<span class="pink-dot">●</span> psychosomatic symptoms<br>
+<span class="pink-dot">●</span> adaptation challenges following a relocation/move or a loss of environment<br>
+<span class="pink-dot">●</span> responses to parental separation and family changes<br>
+<span class="pink-dot">●</span> speech and language developmental delay<br>
+<span class="pink-dot">●</span> hyperactivity and difficulties with concentration
 </p>
 
 <p>
-Робота ведеться українською, російською та англійською мовами.
+Working languages: Ukrainian, Russian, English.
 </p>
 
 </div>
@@ -913,7 +919,7 @@ Mosiichuk
 
 </section>
 
-<footer class="footer fade visible">
+<footer class="footer fade">
 
 <div class="container">
 
@@ -922,16 +928,54 @@ Initial consultation available
 </h2>
 
 <p>
-Перша зустріч допомагає зрозуміти запит батьків, побачити актуальний стан дитини та визначити можливий напрям подальшої роботи.
+The first meeting helps us understand the parents' concerns, assess the child's current state, and identify a possible direction for the work ahead.
 </p>
 
-<a href="https://instagram.com/ellie.ua" target="_blank" class="button">
-Записатись
+<a href="https://instagram.com/elliekids_center" target="_blank" class="button">
+Book a consultation
 </a>
+
+<div class="contacts-block">
+
+<h3>CONTACTS</h3>
+
+<div class="contact-item">
+<a href="https://instagram.com/elliekids_center" target="_blank">
+Instagram
+</a>
+</div>
+
+<div class="contact-item">
+<a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
+WhatsApp
+</a>
+</div>
+
+<div class="contact-item">
+<a href="mailto:zhanna@elliekidstherapy.co.ua">
+zhanna@elliekidstherapy.co.ua
+</a>
+</div>
 
 </div>
 
-</footer>
+<div class="footer-info">
+
+    <p>Privacy policy</p>
+
+    <p>Agreement</p>
+
+    <p class="footer-credit">
+        Website by yamm.design
+    </p>
+
+    <p>
+        ©2026 Zhanna Mosiichuk / All rights reserved
+    </p>
+
+</div>
+
+</div></footer>
 
 </div>
 
@@ -1011,14 +1055,16 @@ Reflecting parental concern
 </h2>
 
 <p class="section-text">
-
 You feel like something is going on with your child.
-<br><br>
+</p>
 
+<p class="section-text">
 Anxiety, withdrawal, aggression, jealousy, silence, or adaptation difficulties are often not the signs of "bad behaviour", but rather the psyche's way of signalling inner tension.
-<br><br>
+</p>
 
+<p class="section-text">
 Therapy helps us understand what lies behind the symptoms and gradually stabilise the child’s condition.
+</p>
 
 </p>
 
@@ -1091,15 +1137,15 @@ Clinical approach
 </h2>
 
 <p class="section-text">
-
 A child’s symptoms are viewed as a meaningful form of expressing an internal conflict.
-<br><br>
+</p>
 
+<p class="section-text">
 The work is directed at understanding this process and facilitating its transformation.
-<br><br>
+</p>
 
+<p class="section-text">
 Therapy supports the child's development, their capacity for expression, adaptation, and stability.
-
 </p>
 
 </div>
@@ -1162,8 +1208,8 @@ Mosiichuk
 
 
 <p>
-Psychoanalytic Therapist<br>
-Founder of Ellie Therapy Kids Center
+Psychoanalytic Therapist founder of<br>
+Ellie Therapy Kids Center
 </p>
 
 <p>
@@ -1301,20 +1347,23 @@ Kids Center
 <div class="container fade">
 
 ${gallery}
-<br>
+
 <h2 class="section-title">
 Дзеркало запиту батьків
 </h2>
 
+
 <p class="section-text">
-
 Ви відчуваєте, що з дитиною щось відбувається.
-<br><br>
+</p>
 
+<p class="section-text">
 Тривога, замкнутість, агресія, ревнощі, мовчання або труднощі адаптації часто є не “поганою поведінкою”, а способом психіки повідомити про внутрішню напругу.
-<br><br>
+</p>
 
+<p class="section-text">
 Терапія допомагає зрозуміти, що стоїть за симптомом, і поступово стабілізувати стан дитини.
+</p>
 
 </p>
 
@@ -1415,14 +1464,16 @@ ${gallery}
 </h2>
 
 <p class="section-text">
-
 Симптом дитини розглядається як значуща форма вираження внутрішнього конфлікту.
-<br><br>
+</p>
 
+<p class="section-text">
 Робота спрямована на розуміння цього процесу та його трансформацію.
-<br>
+</p>
 
+<p class="section-text">
 Терапія підтримує розвиток дитини, її здатність до вираження, адаптації та стабільності.
+</p>
 
 </p>
 
@@ -1486,8 +1537,8 @@ ${gallery}
 
 
 <p>
-Психоаналітичний терапевт<br>
-Засновниця Ellie Therapy Kids Center
+Психоаналітичний терапевт засновниця<br>
+Ellie Therapy Kids Center
 </p>
 
 <p>
