@@ -558,13 +558,16 @@ body{
 .cards-wrapper{
     position:relative;
     width:100%;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:visible;
     margin-top:40px;
 }
 
+
+
 .cards{
     display:flex;
-    gap:24px;
+    gap:0px;
     overflow-x:auto;
     scroll-behavior:smooth;
     scrollbar-width:none;
@@ -1860,51 +1863,28 @@ if(!cards || !next || !prev) return;
 
 const getSlideWidth = () => {
     const item = cards.querySelector('.card, .cards-image');
-    return item.offsetWidth + 24;
+    return item.offsetWidth;
 };
 
 next.addEventListener('click', () => {
 
-    const maxScroll = cards.scrollWidth - cards.clientWidth;
-    const step = getSlideWidth();
+    const step = cards.clientWidth;
 
-    if(cards.scrollLeft + step >= maxScroll){
-        
-        cards.scrollTo({
-            left:0,
-            behavior:'smooth'
-        });
-
-    } else {
-
-        cards.scrollBy({
-            left:step,
-            behavior:'smooth'
-        });
-
-    }
+    cards.scrollBy({
+        left:step,
+        behavior:'smooth'
+    });
 
 });
 
 prev.addEventListener('click', () => {
 
-    const step = getSlideWidth();
+    const step = cards.clientWidth;
 
-    if(cards.scrollLeft <= 0){
-
-        cards.scrollTo({
-            left:cards.scrollWidth,
-            behavior:'smooth'
-        });
-
-    } else {
-
-        cards.scrollBy({
-            left:-step,
-            behavior:'smooth'
-        });
-
-    }
+    cards.scrollBy({
+        left:-step,
+        behavior:'smooth'
+    });
 
 });
 
