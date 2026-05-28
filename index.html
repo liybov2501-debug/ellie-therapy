@@ -19,7 +19,7 @@
 :root{
     --bg:#f5f1eb;
     --text:#1d1d1d;
-    --muted:#6c6c6c;
+    --muted:#1d1d1d;
     --line:#ddd6ce;
     --card:#f8f5f1;
 }
@@ -69,7 +69,7 @@ header{
     top:0;
     z-index:999;
     backdrop-filter:blur(16px);
-    background:rgba(245,241,235,.7);
+    background:#fcf8d9;
     border-bottom:1px solid rgba(0,0,0,.04);
     padding:24px 0;
 }
@@ -77,12 +77,21 @@ header{
 .nav{
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
+    position:relative;
 }
 
-.logo{
-   font-family:'Nunito',sans-serif;
-    font-size:30px;
+.lang-switch{
+    position:absolute;
+    right:0;
+    display:flex;
+    gap:10px;
+}
+
+.logo img{
+    height:30px;
+    width:auto;
+    display:block;
 }
 
 .lang-switch{
@@ -116,8 +125,8 @@ header{
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:0px;
+    grid-template-columns:.9fr 1.1fr;
+    gap:40px;
     align-items:center;
 }
 
@@ -190,21 +199,26 @@ header{
 .hero-image{
     height:720px;
     border-radius:0;
-    background:url('1O1A7002 .webp') center center/cover no-repeat;
+    background:url('головне фото.webp') center center/cover no-repeat;
 }
 
 
 
 .cards-section{
-    padding-top:0px;
+    background:#f0f7e2;
+    padding:10px 0 40px;
+    margin-top:30px;
 }
 
 .section-title{
     font-family:'Nunito',sans-serif;
-    font-size:55px;
+    font-size:42px;
     line-height:1;
-    margin-top:15px;
-    margin-bottom:20px;
+    margin-top:30px;
+    margin-bottom:30px;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
 }
 
 .section-text{
@@ -216,131 +230,7 @@ header{
     margin-bottom:11px;
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 24px;
-}
 
-.card{
-    background: rgba(255,255,255,0.55);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 28px;
-    padding: 28px;
-    backdrop-filter: blur(10px);
-}
-
-.card h3{
-    font-size: 22px;
-    margin-bottom: 14px;
-    line-height: 1.2;
-}
-
-.card p{
-    font-size: 16px;
-    line-height: 1.7;
-    color: #666;
-}
-
-.cards-image{
-    width: 100%;
-    height: 100%;
-    min-height: 260px;
-    overflow: hidden;
-    border-radius: 28px;
-}
-
-.cards-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Адаптація під телефон */
-@media (max-width: 768px){
-
-    .cards{
-        display:flex;
-        flex-direction:column;
-        gap:0;
-        width:100%;
-    }
-
-    .card{
-        width:100%;
-        padding:32px 26px;
-        margin:0;
-        border-radius:0;
-    }
-
-    .card h3{
-        font-size:42px;
-        line-height:1.05;
-        margin-bottom:22px;
-    }
-
-    .card p{
-        font-size:18px;
-        line-height:1.7;
-    }
-
-    .cards-image{
-        width:100%;
-        height:420px;
-        min-height:420px;
-        margin:0;
-        border-radius:0;
-        overflow:hidden;
-    }
-
-    .cards-image img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        display:block;
-    }
-
-}
-
-.card{
-    padding:40px;
-    border-radius:0;
-    border:1px solid var(--line);
-    background:#efcedb;
-    transition:.4s;
-
-}
-.cards-image{
-    grid-column:1/3;
-    height:420px;
-    border-radius:0;
-    overflow:hidden;
-    margin:6px 0;
-}
-
-.cards-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-.card:hover{
-    transform:translateY(-6px);
-}
-
-.card h3{
-    font-family:'Nunito',sans-serif;
-    font-size:36px;
-    margin-bottom:18px;
-}
-
-.card p{
-    line-height:1.9;
-    color:var(--muted);
-    text-wrap:pretty;
-}
 
 .clinical{
     max-width:900px;
@@ -365,8 +255,13 @@ header{
     grid-template-columns:.9fr 1.1fr;
     gap:16px;
     align-items:center;
-}
 
+}
+.founder-section{
+    background:#f0f7e2;
+    padding:40px 0;
+    margin-top:20px;
+}
 .founder-image{
     height:820px;
     border-radius:0;
@@ -375,9 +270,12 @@ header{
 
 .founder-info h2{
     font-family:'Nunito',sans-serif;
-    font-size:34px;
+    font-size:42px;
     line-height:.95;
     margin-bottom:15px;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
 }
 
 .founder-info p{
@@ -388,15 +286,47 @@ header{
 }
 
 .footer{
-    padding:10px 0 80px;
+    background:#efcedb;
+
+    padding:40px 0 0px;
+
     text-align:left;
+    margin-top:20px;
+}
+.footer-info{
+    background:#fcf8d9;
+
+    border-top:20px solid #f5f1eb;
+
+    padding:40px 20px;
+
+    margin-top:0px;
+
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+.footer-info{
+    position:relative;
+}
+.footer .container{
+    overflow:visible;
 }
 
 .footer h2{
     font-family:'Nunito',sans-serif;
-    font-size:82px;
+    font-size:42px;
     line-height:.95;
     margin-bottom:17px;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
 }
 
 .footer p{
@@ -422,57 +352,6 @@ header{
 
 /* ===== Gallery ===== */
 
-.therapy-gallery{
-    margin-top:20px;
-    margin-bottom:26px;
-    overflow:hidden;
-    position:relative;
-}
-
-
-.gallery-track{
-    display:flex;
-    gap:22px;
-    width:max-content;
-    animation:scrollGallery 20s linear infinite;
-}
-
-.gallery-track:hover{
-    animation-play-state:paused;
-}
-
-.gallery-item{
-    flex:0 0 auto;
-    width:360px;
-    height:520px;
-    border-radius:0;
-    overflow:hidden;
-    background:transparent;
-    position:relative;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    border-radius:0;
-    transition:transform .6s ease;
-}
-
-
-.gallery-item:hover img{
-    transform:scale(1.04);
-}
-
-@keyframes scrollGallery{
-    0%{
-        transform:translateX(0);
-    }
-    100%{
-        transform:translateX(calc(-50% - 11px));
-    }
-}
 
 @supports (padding:max(0px)) {
 
@@ -494,7 +373,6 @@ body{
 @media(max-width:980px){
 
 .hero-grid,
-.cards,
 .founder{
     display:grid;
     grid-template-columns:1fr;
@@ -553,6 +431,14 @@ body{
 
 @media(max-width:640px){
 
+.logo img{
+    height:30px;
+}
+
+.concern-section{
+    padding:15px 0;
+}
+
 
 .container{
     width:100%;
@@ -599,6 +485,7 @@ body{
 
 .contacts-block{
     margin-top:28px;
+    margin-bottom:40px;
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -623,6 +510,20 @@ body{
     opacity:.6;
 }
 
+.concern-image{
+    width:100%;
+    height:420px;
+    overflow:hidden;
+    margin:24px 0;
+}
+
+.concern-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
 .pink-dot{
     color:#eba2bf;
 }
@@ -631,6 +532,213 @@ body{
     color:#eba2bf;
 }
 
+.concern-section{
+    background:#fcf8d9;
+    padding:40px 0;
+}
+.clinical-section{
+    background:#fcf8d9;
+    padding:10px 0 20px;
+    margin-top:20px;
+}
+@media(max-width:640px){
+
+.concern-section{
+    padding:15px 0;
+}
+.cards-section{
+    background:#f0f7e2;
+    margin-top:20px;
+}
+
+}
+
+/* ===== HORIZONTAL CAROUSEL ===== */
+
+.cards-wrapper{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    margin-top:40px;
+}
+
+.cards{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    scroll-snap-type:x mandatory;
+    padding-bottom:10px;
+}
+
+.cards::-webkit-scrollbar{
+    display:none;
+}
+
+.slide{
+    display:contents;
+}
+
+.card,
+.cards-image{
+    flex:0 0 calc(50% - 12px);
+    scroll-snap-align:start;
+}
+
+
+.card{
+    width:100%;
+    height:520px;
+
+    background:#efcedb;
+    border-radius:28px;
+
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    border:none;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    font-family:'Nunito',sans-serif;
+    font-size:42px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:17px;
+    line-height:1.8;
+    color:#5f5f5f;
+}
+
+.cards-image{
+    width:100%;
+    height:520px;
+
+    overflow:hidden;
+    border-radius:28px;
+}
+
+.cards-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:56px;
+    height:56px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+    color:#1d1d1d;
+
+    font-size:34px;
+    cursor:pointer;
+
+    z-index:50;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.slider-btn:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+.slider-btn.prev{
+    left:15px;
+}
+
+.slider-btn.next{
+    right:15px;
+}
+.contact-item a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    color:var(--text);
+    text-decoration:none;
+    font-size:17px;
+
+    transition:.3s;
+}
+
+.contact-icon{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+
+    border-radius:50%;
+}
+@media(max-width:640px){
+
+.cards{
+    gap:0;
+}
+
+.slide{
+    display:contents;
+}
+
+.card,
+.cards-image{
+    flex:0 0 100%;
+}
+
+.card,
+.cards-image{
+    flex:0 0 100%;
+    width:100%;
+    height:420px;
+}
+
+.card{
+    padding:34px;
+    border-radius:24px;
+}
+
+.cards-image{
+    border-radius:24px;
+}
+
+.card h3{
+    font-size:34px;
+    line-height:1.1;
+}
+
+.card p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+.slider-btn{
+    width:42px;
+    height:42px;
+    font-size:26px;
+}
+
+}
 
 </style>
 </head>
@@ -641,7 +749,9 @@ body{
 
 <div class="container nav">
 
-<div class="logo">Ellie Therapy</div>
+<div class="logo">
+    <img src="Ellie_logo.png" alt="Ellie Kids Center Logo">
+</div>
 
 <div class="lang-switch">
 <button class="lang-btn" onclick="setLanguage('en', this)">ENG</button>
@@ -656,21 +766,14 @@ body{
 
 <section class="hero">
 
-<div class="container hero-grid fade visible">
+<div class="container hero-grid fade">
+
+<div class="hero-image"></div>
 
 <div>
 
-<div class="hero-small">
-Psychoanalytic Child Therapy in London
-</div>
-
-<h1>
-Ellie Therapy<br>
-Kids Center
-</h1>
-
 <p>
-A space for child psychoanalytic therapy, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
+A space for child psychoanalytic therapy in London, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
 <br>
 Our work is grounded in the approaches of F. Dolto, S. Freud, M. Klein, and other psychoanalytic traditions.
 </p>
@@ -681,39 +784,15 @@ Book a consultation
 
 </div>
 
-
-<div class="hero-image"></div>
-
 </div>
 
 </section>
 
-<section>
+<section class="concern-section">
 
 <div class="container fade">
 
 
-<div class="therapy-gallery">
-<div class="gallery-track">
-
-<div class="gallery-item"><img src="1O1A69211.webp"></div>
-<div class="gallery-item"><img src="1O1A70599.webp"></div>
-<div class="gallery-item"><img src="1O1A70311.webp"></div>
-<div class="gallery-item"><img src="1O1A71400.webp"></div>
-<div class="gallery-item"><img src="1O1A6817.webp"></div>
-<div class="gallery-item"><img src="1O1A69599.webp"></div>
-<div class="gallery-item"><img src="1O1A70211.webp"></div>
-
-<div class="gallery-item"><img src="1O1A69211.webp"></div>
-<div class="gallery-item"><img src="1O1A70599.webp"></div>
-<div class="gallery-item"><img src="1O1A70311.webp"></div>
-<div class="gallery-item"><img src="1O1A71400.webp"></div>
-<div class="gallery-item"><img src="1O1A6817.webp"></div>
-<div class="gallery-item"><img src="1O1A69599.webp"></div>
-<div class="gallery-item"><img src="1O1A70211.webp"></div>
-
-</div>
-</div>
 
 
 
@@ -726,9 +805,17 @@ Reflecting parental concern
 You feel like something is going on with your child.
 </p>
 
+<div class="concern-image">
+    <img src="2.webp" alt="therapy image">
+</div>
+
 <p class="section-text">
 Anxiety, withdrawal, aggression, jealousy, silence, or adaptation difficulties are often not the signs of "bad behaviour", but rather the psyche's way of signalling inner tension.
 </p>
+
+<div class="concern-image">
+    <img src="3.webp" alt="therapy image">
+</div>
 
 <p class="section-text">
 Therapy helps us understand what lies behind the symptoms and gradually stabilise the child’s condition.
@@ -747,56 +834,98 @@ Therapy helps us understand what lies behind the symptoms and gradually stabilis
 <h2 class="section-title">
 How we work
 </h2>
+<p class="section-text">
+Our work is based on a psychoanalytic understanding of the child as a subject with their own inner world.
+</p>
+
+<p class="section-text">
+What we use in our work:
+</p>
+<div class="cards-wrapper">
+
+<button class="slider-btn prev">‹</button>
+
+
 
 <div class="cards">
 
-    <div class="card">
-        <h3>Play as the language of the unconscious</h3>
-        <p>
-            Children express their experiences and emotions through symbolic play
-        </p>
-    </div>
+    <!-- SLIDE 1 -->
 
-    <div class="cards-image">
-        <img src="1O1A6934.webp" alt="therapy image">
-    </div>
 
-    <div class="card">
-        <h3>Drawing and image</h3>
-        <p>
-            As a means of expressing what cannot yet be put into words
-        </p>
-    </div>
+        <div class="card">
+            <h3>Play as the language of the unconscious</h3>
 
-    <div class="cards-image">
-        <img src="малюнок.webp" alt="therapy image">
-    </div>
+            <p>
+                Children express their experiences and emotions through symbolic play
+            </p>
+        </div>
 
-    <div class="card">
-        <h3>A stable therapeutic setting</h3>
-        <p>
-            The consistency of the space creates conditions for inner change
-        </p>
-    </div>
+        <div class="cards-image">
+            <img src="1O1A6934.webp" alt="therapy image">
+        </div>
 
-    <div class="cards-image">
-        <img src="87.webp" alt="therapy image">
-    </div>
 
-    <div class="card">
-        <h3>Working with parents</h3>
-        <p>
-            Understanding the kids always includes understanding their home environment
-    </p></div>
 
-    <div class="cards-image">
-        <img src="терапевт.webp" alt="therapy image">
-    </div>
+    <!-- SLIDE 2 -->
+    
+
+        <div class="card">
+            <h3>Drawing and image</h3>
+
+            <p>
+                As a means of expressing what cannot yet be put into words
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="малюнок.webp" alt="therapy image">
+        </div>
+
+    
+
+    <!-- SLIDE 3 -->
+    
+
+        <div class="card">
+            <h3>A stable therapeutic setting</h3>
+
+            <p>
+                The consistency of the space creates conditions for inner change
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="87.webp" alt="therapy image">
+        </div>
+
+    
+
+    <!-- SLIDE 4 -->
+  
+
+        <div class="card">
+            <h3>Working with parents</h3>
+
+            <p>
+                Understanding the kids always includes understanding their home environment
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="терапевт.webp" alt="therapy image">
+        </div>
+
+    
+
 </div>
-</div></section>
+
+<button class="slider-btn next">›</button>
+
+</div>
+</section>
 <!-- ПРОДОВЖЕННЯ КОДУ ПІСЛЯ SECTION "HOW WE WORK" -->
 
-<section>
+<section class="clinical-section">
 
 <div class="container fade clinical">
 
@@ -831,7 +960,9 @@ Therapy supports the child's development, their capacity for expression, adaptat
 <h2 class="section-title">
 Who this is for
 </h2>
-
+<p class="section-text">
+The centre works with children aged 2–18 who:
+</p>
 <div class="list">
 
 <div class="list-item">
@@ -864,7 +995,7 @@ Who this is for
 
 </section>
 
-<section>
+<section class="founder-section">
 
 <div class="container founder fade">
 
@@ -880,7 +1011,7 @@ Mosiichuk
 
 
 <p>
-Psychoanalytic Therapist founder of<br>
+Psychoanalytic Therapist, founder of<br>
 Ellie Therapy Kids Center
 </p>
 
@@ -940,24 +1071,31 @@ Book a consultation
 <h3>CONTACTS</h3>
 
 <div class="contact-item">
-<a href="https://instagram.com/elliekids_center" target="_blank">
-Instagram
-</a>
+    <a href="https://instagram.com/elliekids_center" target="_blank">
+        <img src="instagram.png" alt="Instagram" class="contact-icon">
+        <span>Instagram</span>
+    </a>
 </div>
 
 <div class="contact-item">
-<a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
-WhatsApp
-</a>
+    <a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" class="contact-icon">
+        <span>WhatsApp</span>
+    </a>
 </div>
 
 <div class="contact-item">
-<a href="mailto:zhanna@elliekidstherapy.co.ua">
-zhanna@elliekidstherapy.co.ua
-</a>
+    <a href="mailto:zhanna@elliekidstherapy.co.ua">
+        <img src="message.png" alt="Email" class="contact-icon">
+        <span>zhanna@elliekidstherapy.co.ua</span>
+    </a>
 </div>
 
 </div>
+
+
+
+
 
 <div class="footer-info">
 
@@ -981,29 +1119,7 @@ zhanna@elliekidstherapy.co.ua
 
 <script>
 
-const gallery = `
-<div class="therapy-gallery">
-<div class="gallery-track">
 
-<div class="gallery-item"><img src="1O1A69211.webp"></div>
-<div class="gallery-item"><img src="1O1A70599.webp"></div>
-<div class="gallery-item"><img src="1O1A70311.webp"></div>
-<div class="gallery-item"><img src="1O1A71400.webp"></div>
-<div class="gallery-item"><img src="1O1A6817.webp"></div>
-<div class="gallery-item"><img src="1O1A69599.webp"></div>
-<div class="gallery-item"><img src="1O1A70211.webp"></div>
-
-<div class="gallery-item"><img src="1O1A69211.webp"></div>
-<div class="gallery-item"><img src="1O1A70599.webp"></div>
-<div class="gallery-item"><img src="1O1A70311.webp"></div>
-<div class="gallery-item"><img src="1O1A71400.webp"></div>
-<div class="gallery-item"><img src="1O1A6817.webp"></div>
-<div class="gallery-item"><img src="1O1A69599.webp"></div>
-<div class="gallery-item"><img src="1O1A70211.webp"></div>
-
-</div>
-</div>
-`;
 
 const translations = {
 
@@ -1013,19 +1129,12 @@ en: `
 
 <div class="container hero-grid fade">
 
+<div class="hero-image"></div>
+
 <div>
 
-<div class="hero-small">
-Psychoanalytic Child Therapy in London
-</div>
-
-<h1>
-Ellie Therapy<br>
-Kids Center
-</h1>
-
 <p>
-A space for child psychoanalytic therapy, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
+A space for child psychoanalytic therapy in London, where we view the kids’ behaviour as part of their inner world, not merely a problem to be stopped.
 <br>
 Our work is grounded in the approaches of F. Dolto, S. Freud, M. Klein, and other psychoanalytic traditions.
 </p>
@@ -1036,19 +1145,13 @@ Book a consultation
 
 </div>
 
-
-<div class="hero-image"></div>
-
 </div>
 
 </section>
 
-<section>
+<section class="concern-section">
 
 <div class="container fade">
-
-${gallery}
-
 
 <h2 class="section-title">
 Reflecting parental concern
@@ -1058,9 +1161,17 @@ Reflecting parental concern
 You feel like something is going on with your child.
 </p>
 
+<div class="concern-image">
+    <img src="2.webp" alt="therapy image">
+</div>
+
 <p class="section-text">
 Anxiety, withdrawal, aggression, jealousy, silence, or adaptation difficulties are often not the signs of "bad behaviour", but rather the psyche's way of signalling inner tension.
 </p>
+
+<div class="concern-image">
+    <img src="3.webp" alt="therapy image">
+</div>
 
 <p class="section-text">
 Therapy helps us understand what lies behind the symptoms and gradually stabilise the child’s condition.
@@ -1080,55 +1191,98 @@ Therapy helps us understand what lies behind the symptoms and gradually stabilis
 How we work
 </h2>
 
+<p class="section-text">
+Our work is based on a psychoanalytic understanding of the child as a subject with their own inner world.
+</p>
+
+<p class="section-text">
+What we use in our work:
+</p>
+
+
+   <div class="cards-wrapper">
+
+<button class="slider-btn prev">‹</button>
+
 <div class="cards">
 
-    <div class="card">
-        <h3>Play as the language of the unconscious</h3>
-        <p>
-            Children express their experiences and emotions through symbolic play
-        </p>
-    </div>
+    <!-- SLIDE 1 -->
+    
 
-    <div class="cards-image">
-        <img src="1O1A6934.webp" alt="therapy image">
-    </div>
+        <div class="card">
+            <h3>Play as the language of the unconscious</h3>
 
-    <div class="card">
-        <h3>Drawing and image</h3>
-        <p>
-            As a means of expressing what cannot yet be put into words
-        </p>
-    </div>
+            <p>
+                Children express their experiences and emotions through symbolic play
+            </p>
+        </div>
 
-    <div class="cards-image">
-        <img src="малюнок.webp" alt="therapy image">
-    </div>
+        <div class="cards-image">
+            <img src="1O1A6934.webp" alt="therapy image">
+        </div>
 
-    <div class="card">
-        <h3>A stable therapeutic setting</h3>
-        <p>
-            The consistency of the space creates conditions for inner change
-        </p>
-    </div>
+   
 
-    <div class="cards-image">
-        <img src="87.webp" alt="therapy image">
-    </div>
+    <!-- SLIDE 2 -->
+   
 
-    <div class="card">
-        <h3>Working with parents</h3>
-        <p>
-            Understanding the kids always includes understanding their home environment
-    </div>
+        <div class="card">
+            <h3>Drawing and image</h3>
 
-    <div class="cards-image">
-        <img src="терапевт.webp" alt="therapy image">
-    </div>
+            <p>
+                As a means of expressing what cannot yet be put into words
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="малюнок.webp" alt="therapy image">
+        </div>
+
+   
+
+    <!-- SLIDE 3 -->
+    
+
+        <div class="card">
+            <h3>A stable therapeutic setting</h3>
+
+            <p>
+                The consistency of the space creates conditions for inner change
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="87.webp" alt="therapy image">
+        </div>
+
+    
+
+    <!-- SLIDE 4 -->
+    
+
+        <div class="card">
+            <h3>Working with parents</h3>
+
+            <p>
+                Understanding the kids always includes understanding their home environment
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="терапевт.webp" alt="therapy image">
+        </div>
+
+    
+
+</div>
+
+<button class="slider-btn next">›</button>
+
 </div>
 </section>
 <!-- ПРОДОВЖЕННЯ КОДУ ПІСЛЯ SECTION "HOW WE WORK" -->
 
-<section>
+<section class="clinical-section">
 
 <div class="container fade clinical">
 
@@ -1159,7 +1313,9 @@ Therapy supports the child's development, their capacity for expression, adaptat
 <h2 class="section-title">
 Who this is for
 </h2>
-
+<p class="section-text">
+The centre works with children aged 2–18 who:
+</p>
 <div class="list">
 
 <div class="list-item">
@@ -1192,7 +1348,7 @@ Who this is for
 
 </section>
 
-<section>
+<section class="founder-section">
 
 <div class="container founder fade">
 
@@ -1208,7 +1364,7 @@ Mosiichuk
 
 
 <p>
-Psychoanalytic Therapist founder of<br>
+Psychoanalytic Therapist, founder of<br>
 Ellie Therapy Kids Center
 </p>
 
@@ -1268,26 +1424,31 @@ Book a consultation
 <h3>CONTACTS</h3>
 
 <div class="contact-item">
-<a href="https://instagram.com/elliekids_center" target="_blank">
-Instagram
-</a>
+    <a href="https://instagram.com/elliekids_center" target="_blank">
+        <img src="instagram.png" alt="Instagram" class="contact-icon">
+        <span>Instagram</span>
+    </a>
 </div>
 
 <div class="contact-item">
-<a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
-WhatsApp
-</a>
+    <a href="https://wa.me/ТВІЙ_НОМЕР" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" class="contact-icon">
+        <span>WhatsApp</span>
+    </a>
 </div>
 
 <div class="contact-item">
-<a href="mailto:zhanna@elliekidstherapy.co.ua">
-zhanna@elliekidstherapy.co.ua
-</a>
+    <a href="mailto:zhanna@elliekidstherapy.co.ua">
+        <img src="message.png" alt="Email" class="contact-icon">
+        <span>zhanna@elliekidstherapy.co.ua</span>
+    </a>
 </div>
 
 </div>
 
-<div style="text-align:center; margin-top:60px; color:#8c8c8c; font-size:12px; line-height:2;">
+
+
+<div class="footer-info">
 
 <p>Privacy policy</p>
 
@@ -1313,19 +1474,12 @@ uk: `
 
 <div class="container hero-grid fade">
 
+<div class="hero-image"></div>
+
 <div>
 
-<div class="hero-small">
-Психоаналітична дитяча терапія в Лондоні
-</div>
-
-<h1>
-Ellie Therapy<br>
-Kids Center
-</h1>
-
 <p>
-Простір дитячої психоаналітичної терапії, де поведінка дитини розглядається як частина її внутрішнього світу, а не лише проблема, яку потрібно зупинити.
+Простір дитячої психоаналітичної терапії в Лондоні, де поведінка дитини розглядається як частина її внутрішнього світу, а не лише проблема, яку потрібно зупинити.
 <br>
 Робота ґрунтується на підходах Ф. Дольто, З. Фрейда, М.Кляйн та інших психоаналітичних традиціях.
 </p>
@@ -1336,17 +1490,15 @@ Kids Center
 
 </div>
 
-<div class="hero-image"></div>
-
 </div>
 
 </section>
 
-<section>
+<section class="concern-section">
 
 <div class="container fade">
 
-${gallery}
+
 
 <h2 class="section-title">
 Дзеркало запиту батьків
@@ -1357,9 +1509,17 @@ ${gallery}
 Ви відчуваєте, що з дитиною щось відбувається.
 </p>
 
+<div class="concern-image">
+    <img src="2.webp" alt="therapy image">
+</div>
+
 <p class="section-text">
 Тривога, замкнутість, агресія, ревнощі, мовчання або труднощі адаптації часто є не “поганою поведінкою”, а способом психіки повідомити про внутрішню напругу.
 </p>
+
+<div class="concern-image">
+    <img src="3.webp" alt="therapy image">
+</div>
 
 <p class="section-text">
 Терапія допомагає зрозуміти, що стоїть за симптомом, і поступово стабілізувати стан дитини.
@@ -1371,91 +1531,103 @@ ${gallery}
 
 </section>
 
-<section>
+<section class="cards-section">
 
 <div class="container fade">
 
 <h2 class="section-title">
 Як відбувається робота
 </h2>
+<p class="section-text">
+Робота будується на психоаналітичному розумінні дитини як суб’єкта з власним внутрішнім світом.
+</p>
+
+<p class="section-text">
+У роботі використовуються:
+</p>
+<div class="cards-wrapper">
+
+<button class="slider-btn prev">‹</button>
 
 <div class="cards">
 
-    <div class="card">
-        <h3>Гра як мова несвідомого</h3>
-        <p>
-            Дитина виражає досвід і переживання через символічну гру
-        </p>
+
+    <!-- SLIDE 1 -->
+   
+
+        <div class="card">
+            <h3>Гра як мова несвідомого</h3>
+
+            <p>
+                Дитина виражає досвід і переживання через символічну гру
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="1O1A6934.webp" alt="Гра як мова несвідомого">
+        </div>
+
+  
+
+    <!-- SLIDE 2 -->
+  
+
+        <div class="card">
+            <h3>Малюнок і образ</h3>
+
+            <p>
+                Як спосіб вираження того, що ще неможливо сказати словами
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="малюнок.webp" alt="Малюнок і образ">
+        </div>
+
+   
+
+    <!-- SLIDE 3 -->
+    
+
+        <div class="card">
+            <h3>Стабільний терапевтичний сетинг</h3>
+
+            <p>
+                Постійність простору створює умови для внутрішніх змін
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="87.webp" alt="Стабільний терапевтичний сетинг">
+        </div>
+
+    
+
+    <!-- SLIDE 4 -->
+   
+
+        <div class="card">
+            <h3>Робота з батьками</h3>
+
+            <p>
+                Розуміння дитини завжди включає розуміння її середовища вдома
+            </p>
+        </div>
+
+        <div class="cards-image">
+            <img src="терапевт.webp" alt="Робота з батьками">
+        </div>
+
     </div>
 
-    <div class="cards-image">
-        <img 
-            src="1O1A6934.webp"
-            alt="Гра як мова несвідомого"
-            loading="lazy"
-            width="800"
-            height="1000"
-        >
-    </div>
 
-    <div class="card">
-        <h3>Малюнок і образ</h3>
-        <p>
-            Як спосіб вираження того, що ще неможливо сказати словами
-        </p>
-    </div>
 
-    <div class="cards-image">
-        <img 
-            src="малюнок.webp"
-            alt="Малюнок і образ"
-            loading="lazy"
-            width="800"
-            height="1000"
-        >
-    </div>
-
-    <div class="card">
-        <h3>Стабільний терапевтичний сетинг</h3>
-        <p>
-            Постійність простору створює умови для внутрішніх змін
-        </p>
-    </div>
-
-    <div class="cards-image">
-        <img 
-            src="87.webp"
-            alt="Стабільний терапевтичний сетинг"
-            loading="lazy"
-            width="800"
-            height="1000"
-        >
-    </div>
-
-    <div class="card">
-        <h3>Робота з батьками</h3>
-        <p>
-            Розуміння дитини завжди включає розуміння її середовища вдома
-        </p>
-    </div>
-
-    <div class="cards-image">
-        <img 
-            src="терапевт.webp"
-            alt="Робота з батьками"
-            loading="lazy"
-            width="800"
-            height="1000"
-        >
-    </div>
+<button class="slider-btn next">›</button>
 
 </div>
-
-</div>
-
 </section>
 
-<section>
+<section class="clinical-section">
 
 <div class="container fade clinical">
 
@@ -1488,7 +1660,9 @@ ${gallery}
 <h2 class="section-title">
 Для кого
 </h2>
-
+<p class="section-text">
+Центр працює з дітьми 2–18 років, які:
+</p>
 <div class="list">
 
 <div class="list-item">
@@ -1521,7 +1695,7 @@ ${gallery}
 
 </section>
 
-<section>
+<section class="founder-section">
 
 <div class="container founder fade">
 
@@ -1537,7 +1711,7 @@ ${gallery}
 
 
 <p>
-Психоаналітичний терапевт засновниця<br>
+Психоаналітичний терапевт, засновниця<br>
 Ellie Therapy Kids Center
 </p>
 
@@ -1617,13 +1791,15 @@ zhanna@elliekidstherapy.co.ua
 
 </div>
 
-<div style="text-align:center; margin-top:60px; color:#8c8c8c; font-size:14px; line-height:2;">
+
+
+<div class="footer-info">
 
 <p>Privacy policy</p>
 
 <p>Agreement</p>
 
-<p style="color:#1d1d1d;">
+<p class="footer-credit">
 Website by yamm.design
 </p>
 
@@ -1677,15 +1853,69 @@ observeFade();
 </script>
 
 
+<script>
 
+function initCarousel(){
 
+const cards = document.querySelector('.cards');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
+if(!cards || !next || !prev) return;
 
+const getSlideWidth = () => {
+    const item = cards.querySelector('.card, .cards-image');
+    return item.offsetWidth + 24;
+};
 
+next.addEventListener('click', () => {
 
+    const maxScroll = cards.scrollWidth - cards.clientWidth;
+    const step = getSlideWidth();
 
+    if(cards.scrollLeft + step >= maxScroll){
+        
+        cards.scrollTo({
+            left:0,
+            behavior:'smooth'
+        });
 
+    } else {
 
+        cards.scrollBy({
+            left:step,
+            behavior:'smooth'
+        });
 
+    }
 
+});
+
+prev.addEventListener('click', () => {
+
+    const step = getSlideWidth();
+
+    if(cards.scrollLeft <= 0){
+
+        cards.scrollTo({
+            left:cards.scrollWidth,
+            behavior:'smooth'
+        });
+
+    } else {
+
+        cards.scrollBy({
+            left:-step,
+            behavior:'smooth'
+        });
+
+    }
+
+});
+
+}
+
+initCarousel();
+
+</script>
 </body></html>
