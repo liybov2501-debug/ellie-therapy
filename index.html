@@ -64,14 +64,20 @@ body::before{
 }
 
 header{
-    position:fixed;
-    width:100%;
+    position:fixed !important;
     top:0;
-    z-index:999;
+    left:0;
+
+    width:100%;
+    z-index:9999;
+
     backdrop-filter:blur(16px);
     background:#fcf8d9;
     border-bottom:1px solid rgba(0,0,0,.04);
     padding:10px 0;
+
+    transform:none !important;
+    transition:none !important;
 }
 
 .nav{
@@ -121,7 +127,7 @@ header{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding-top:120px;
+    padding-top:180px;
 }
 
 .hero-grid{
@@ -235,7 +241,7 @@ header{
 
 .clinical{
     max-width:900px;
-    padding-left:0px;
+    margin-left:170px;
 }
 
 .list{
@@ -454,7 +460,7 @@ body{
 }
 
 .hero{
-    padding-top:130px;
+    padding-top:70px;
 }
 
 .hero h1{
@@ -517,15 +523,14 @@ body{
 
 .concern-image{
     width:100%;
-    height:420px;
-    overflow:hidden;
+    height:auto;
+    overflow:visible;
     margin:24px 0;
 }
 
 .concern-image img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto;
     display:block;
 }
 
